@@ -10,6 +10,7 @@ RUN apt-get update \
 
 WORKDIR /app
 COPY ./build-ffmpeg /app/build-ffmpeg
+COPY ./x265.pc /app/x265.pc
 
 RUN SKIPINSTALL=yes /app/build-ffmpeg --build
 
